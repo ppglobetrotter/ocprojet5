@@ -1,0 +1,1 @@
+Get-ADUser -Filter * -Properties * | Select-Object name | export-csv -path C:\Users\Administrateur\Desktop\Livrables\userexport.csv -Encoding UTF8
