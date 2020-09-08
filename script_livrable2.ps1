@@ -1,0 +1,1 @@
+Get-ADGroup -Filter * -SearchBase "OU=Site Paris,DC=acme,DC=fr" | Select-Object name | export-csv -path C:\Users\Administrateur\Desktop\Livrables\groupexport.csv -Encoding UTF8
