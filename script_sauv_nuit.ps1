@@ -1,4 +1,4 @@
-﻿#Script sauvegarde de nuit des postes clients
+﻿#Script sauvegarde de nuit des postes clients.
 
 Try {
 #Sélection des ordinateurs avec Windows 10 dessus.
@@ -11,7 +11,7 @@ Write-Host "Impossible de trouver les ordinateurs"
 exit 1
 }
 
-#Boucle de copie des dossiers utilisateurs
+#Boucle de copie des dossiers utilisateurs si l'ordi est allumé.
 
 ForEach ($Name in $Names)
 {
