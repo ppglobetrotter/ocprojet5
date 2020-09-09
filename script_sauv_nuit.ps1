@@ -12,12 +12,14 @@ exit 1
 }
 
 #Boucle de copie des dossiers utilisateurs
+
 ForEach ($Name in $Names)
 {
-
-xcopy /S /I \\$Name\C$\Users C:\SAVE\$Name /Y >>C:\SAVE\LOG\sauvegarde.log
-
-
+If (Test-Connection $Name -Quiet) { 
+	xcopy /S /I \\$Name\C$\Users C:\SAVE\$Name /Y >>C:\SAVE\LOG\sauvegarde.log
+}
+Else{
+	Write-EventLog -LogName Application -Source "Script svg nuit" -EntryType Error -EventId 1 -Message "$Name non trouvé"
 }
 
-
+}
