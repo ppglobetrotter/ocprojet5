@@ -11,7 +11,7 @@ Write-Host "Impossible de trouver les ordinateurs"
 exit 1
 }
 
-#Boucle de copie des dossiers utilisateurs si l'ordi est allumé sinon erreur.
+#Boucle de copie des dossiers utilisateurs si l'ordi est allumé.
 
 ForEach ($Name in $Names)
 {
